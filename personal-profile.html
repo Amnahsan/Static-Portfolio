@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Profile</title>
+    <link rel="icon" type="image/x-icon" href="https://as1.ftcdn.net/v2/jpg/01/31/29/72/1000_F_131297243_BFmSl15Pl5NeVf1iOPzErcTVvETNZUWa.jpg" class="rounded-3xl">
+    <!-- Tailwind CSS for animations -->
+
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body
+    class="bg-gradient-to-br from-emerald-200 via-emerald-400 to-emerald-800 font-sans"
+  >
+    <div class="container mx-auto px-4 py-8">
+      <!-- Header -->
+      <header
+        class="flex flex-col md:flex-row justify-between items-center mb-8 px-4"
+      >
+        <div class="flex items-center mb-4 md:mb-0 mr-8 inline-block">
+          <div
+            class="w-8 h-8 bg-[#004d24] rounded-full mr-2 inline-block"
+          ></div>
+          <span class="font-bold text-xl inline-block">Amna Hassan</span>
+        </div>
+
+        <!-- Mobile menu button -->
+        <div class="md:hidden flex items-center inline-block">
+          <button
+            id="menu-toggle"
+            class="text-gray-500 hover:text-gray-700 focus:outline-none inline-block"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              ></path>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Navigation menu -->
+        <nav
+          id="menu"
+          class="hidden md:flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6"
+        >
+          <ul
+            class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6"
+          >
+            <li>
+              <a
+                href="index.html"
+                class="text-gray-500 hover:text-gray-700 transition duration-300"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="personal-profile.html"
+                class="text-black font-medium hover:text-gray-800 transition duration-300"
+                >Personal Profile</a
+              >
+            </li>
+            <li>
+              <a
+                href="gallery-page.html"
+                class="text-gray-500 hover:text-gray-700 transition duration-300"
+                >Gallery Page</a
+              >
+            </li>
+            <li>
+              <a
+                href="career-goals.html"
+                class="text-gray-500 hover:text-gray-700 transition duration-300"
+                >Career Goals</a
+              >
+            </li>
+            <li>
+              <a
+                href="projects.html"
+                class="text-gray-500 hover:text-gray-700 transition duration-300"
+                >Projects</a
+              >
+            </li>
+            <li>
+              <a
+                href="skills-interests.html"
+                class="text-gray-500 hover:text-gray-700 transition duration-300"
+                >Skills and Interests</a
+              >
+            </li>
+            <li>
+              <a
+                href="contact-us.html"
+                class="text-gray-500 hover:text-gray-700 transition duration-300"
+                >Contact Us</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      <!-- Mobile menu dropdown -->
+      <div
+        id="mobile-menu"
+        class="md:hidden fixed inset-0 bg-white shadow-lg z-50 hidden inline-block"
+      >
+        <div class="flex justify-between items-center p-4 border-b">
+          <span class="font-bold text-xl inline-block">Menu</span>
+          <button
+            id="menu-close"
+            class="text-gray-500 hover:text-gray-700 focus:outline-none inline-block"
+          >
+            <svg
+              class="w-6 h-6 inline-block"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <nav class="flex flex-col items-center py-6">
+          <ul class="space-y-4">
+            <li>
+              <a
+                href="index.html"
+                class="text-gray-500 hover:text-gray-700 transition duration-300"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="personal-profile.html"
+                class="text-black font-medium hover:text-gray-800 transition duration-300"
+                >Personal Profile</a
+              >
+            </li>
+            <li>
+              <a
+                href="gallery-page.html"
+                class="text-gray-500 hover:text-gray-700 transition duration-300"
+                >Gallery Page</a
+              >
+            </li>
+            <li>
+              <a
+                href="career-goals.html"
+                class="text-gray-500 hover:text-gray-700 transition duration-300"
+                >Career Goals</a
+              >
+            </li>
+            <li>
+              <a
+                href="projects.html"
+                class="text-gray-500 hover:text-gray-700 transition duration-300"
+                >Projects</a
+              >
+            </li>
+            <li>
+              <a
+                href="skills-interests.html"
+                class="text-gray-500 hover:text-gray-700 transition duration-300"
+                >Skills and Interests</a
+              >
+            </li>
+            <li>
+              <a
+                href="contact-us.html"
+                class="text-gray-500 hover:text-gray-700 transition duration-300"
+                >Contact Us</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <script>
+        document
+          .getElementById("menu-toggle")
+          .addEventListener("click", function () {
+            document.getElementById("mobile-menu").classList.toggle("hidden");
+          });
+
+        document
+          .getElementById("menu-close")
+          .addEventListener("click", function () {
+            document.getElementById("mobile-menu").classList.add("hidden");
+          });
+      </script>
+      <main class="grid grid-cols-1 md:grid-cols-2 gap-8 px-4 py-8">
+        <div
+          class="bg-gradient-to-br from-grey-200 via-emerald-800 to-emerald-500 rounded-3xl p-8 flex flex-col justify-between"
+        >
+          <section id="introduction" class="mb-6">
+            <h1 class="text-4xl font-bold mb-4">
+              Hi, I'm Amna Hassan
+            </h1>
+            <p class="text-white mb-4">
+              I am a passionate software engineering student at FAST National
+              University of Science and Technology, Islamabad. My journey in
+              software engineering began at my college, where I built a
+              solid foundation in analytical and logical skills.
+            </p>
+            <div class="mb-4">
+              <h2 class="text-2xl font-semibold mb-2">Current Focus:</h2>
+              <ul class="list-disc list-inside text-white">
+                <li>Advanced C++ Programming</li>
+                <li>User Interface Design with Figma</li>
+                <li>Full-Stack Development with the MERN Stack</li>
+              </ul>
+            </div>
+            <div class="mb-4">
+              <h2 class="text-2xl font-semibold mb-2">Skills & Projects:</h2>
+              <ul class="list-disc list-inside text-white">
+                <li>
+                  Hands-on experience in C++, Java, C#, SQL, HTML, CSS, and
+                  JavaScript
+                </li>
+                <li>Developed a Cafe Management System</li>
+                <li>Designed a fitness mobile app</li>
+                <li>Created a complete e-commerce website for jewelry</li>
+              </ul>
+            </div>
+            <div class="">
+              <h2 class="text-2xl font-semibold mb-2">
+                Community Involvement:
+              </h2>
+              <p class="text-white">
+                I am actively involved in the tech community, sharing my
+                projects and insights online.
+              </p>
+            </div>
+          </section>
+
+          <section id="skills" class="mb-6">
+            <h2 class="text-3xl font-semibold mb-4">Skills & Interests</h2>
+            <div class="flex flex-wrap gap-4">
+              <div class="relative group">
+                <button
+                  class="bg-emerald-300 text-black px-4 py-2 rounded-full transition duration-300 ease-in-out hover:bg-emerald-400"
+                >
+                  C++
+                </button>
+              </div>
+
+              <div class="relative group">
+                <button
+                  class="bg-emerald-300 text-black px-4 py-2 rounded-full transition duration-300 ease-in-out hover:bg-emerald-400"
+                >
+                  JavaScript
+                </button>
+              </div>
+              <div class="relative group">
+                <button
+                  class="bg-emerald-300 text-black px-4 py-2 rounded-full transition duration-300 ease-in-out hover:bg-emerald-400"
+                >
+                  Java
+                </button>
+              </div>
+              <div class="relative group">
+                <button
+                  class="bg-emerald-300 text-black px-4 py-2 rounded-full transition duration-300 ease-in-out hover:bg-emerald-400"
+                >
+                  C#
+                </button>
+              </div>
+              <div class="relative group">
+                <button
+                  class="bg-emerald-300 text-black px-4 py-2 rounded-full transition duration-300 ease-in-out hover:bg-emerald-400"
+                >
+                  SQL
+                </button>
+              </div>
+            </div>
+          </section>
+
+          <section id="contact" class="mt-auto">
+            <div class="flex items-center justify-between space-x-4">
+              <!-- Contact me button -->
+              <button class="bg-black text-white px-6 py-2 rounded-full">
+                Contact me
+              </button>
+
+              <div class="flex space-x-4">
+                <a href="#" class="p-2 bg-white rounded-full">
+                  <img
+                    src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/dribbble.svg"
+                    class="w-7 h-7"
+                  />
+                </a>
+
+                <a
+                  href="#"
+                  class="p-2 bg-white rounded-full hover:bg-gradient-to-r hover:from-[#f58529] hover:to-[#dd2a7b] transition duration-300 ease-in-out"
+                >
+                  <img
+                    src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/instagram.svg"
+                    class="w-7 h-7"
+                  />
+                </a>
+
+                <a
+                  href="#"
+                  class="p-2 bg-white rounded-full hover:bg-[#1DA1F2] transition duration-300 ease-in-out"
+                >
+                  <img
+                    src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg"
+                    class="w-7 h-7"
+                  />
+                </a>
+
+                <a
+                  href="#"
+                  class="p-2 bg-white rounded-full hover:bg-[#0077b5] transition duration-300 ease-in-out"
+                >
+                  <img
+                    src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/linkedin.svg"
+                    class="w-7 h-7"
+                  />
+                </a>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <div
+          class="bg-yellow-400 rounded-3xl w-full flex items-center justify-center overflow-hidden h-full md:h-auto"
+        >
+          <img
+            src="images/preprofile.png"
+            alt="profile photo"
+            class="w-full h-full object-cover"
+          />
+        </div>
+      </main>
+
+      <section
+        class="mt-16 bg-gradient-to-br from-grey-200 via-emerald-800 to-emerald-500 rounded-3xl p-8"
+      >
+        <h2 class="text-3xl font-bold mb-4">Want to work together?</h2>
+        <p class="text-gray-700 mb-2">
+          Feel free to reach out for collaborations or just a friendly hello
+        </p>
+        <p class="text-gray-700 mb-8">Amnahassan1234@example.com</p>
+        <div class="flex items-center space-x-4">
+          <button
+            class="bg-black text-white px-6 py-2 rounded-full hover:bg-gray-800 transition duration-300 ease-in-out"
+          >
+            Contact me
+          </button>
+
+          <a href="https://dribbble.com" class="p-2 bg-white rounded-full hover:bg-pink-400 transition duration-300 ease-in-out">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/dribbble.svg" class="w-7 h-7" />
+        </a>
+        
+        <a href="https://instagram.com" class="p-2 bg-white rounded-full hover:bg-gradient-to-r hover:from-[#f58529] hover:to-[#dd2a7b] transition duration-300 ease-in-out">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/instagram.svg" class="w-7 h-7" />
+        </a>
+        
+        <a href="https://x.com" class="p-2 bg-white rounded-full hover:bg-[#1DA1F2] transition duration-300 ease-in-out">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" class="w-7 h-7" />
+        </a>
+        
+        <a href="https://linkedin.com" class="p-2 bg-white rounded-full hover:bg-[#0077b5] transition duration-300 ease-in-out">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/linkedin.svg" class="w-7 h-7" />
+        </a>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
